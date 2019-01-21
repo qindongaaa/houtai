@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 基于vue和Element的后台管理系统
 > 升级为vue@2.16 + Element@1.0.9
 
@@ -25,3 +26,6 @@ npm run dev
 npm run build
 ```
 
+=======
+# houtai
+>>>>>>> 45cd589e44659b5624ce1c119b60b4d137458a92
