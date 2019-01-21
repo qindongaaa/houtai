@@ -10,11 +10,14 @@
   },
   "dependencies": {
     "element-ui": "1.0.9",
+    "es6-promise": "^4.2.5",
+    "js-cookie": "^2.2.0",
     "lodash.debounce": "^4.0.8",
     "vue": "2.1.6"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
+    "axios": "^0.18.0",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "babel-plugin-transform-runtime": "^6.0.0",

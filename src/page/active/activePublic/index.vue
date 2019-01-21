@@ -47,7 +47,7 @@
           $('html,body').animate({scrollTop:0},500);
       },
       handleNextStep: function () {
-          this.$router.push('/activePublic/step'+(this.step+1));
+          this.$router.push('/active/activePublic/step'+(this.step+1));
           var _this = this;
           setTimeout(function () {
               if(_this.isRouter){

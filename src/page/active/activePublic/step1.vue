@@ -18,7 +18,7 @@
             </el-col>
           </el-row>
           <el-radio-group v-model="ruleForm.fenLei" >
-            <el-radio v-for="item of ruleForm.fenLeis" :label="item.name"></el-radio>
+            <el-radio v-for="item of ruleForm.fenLeis" :label="item.name" ></el-radio>
           </el-radio-group>
         </el-form-item>
 
@@ -419,7 +419,7 @@
         })
     },
       beforeRouteLeave: function (to, from, next) {
-      if(to.path == '/activePublic/step2'){
+      if(to.path == '/active/activePublic/step2'){
         var _this = this;
         this.isAddressTrue = true ;
         this.tagsValid = (this.ruleForm.tags.length ? false : true) ;

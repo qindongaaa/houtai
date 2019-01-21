@@ -4,34 +4,19 @@
     <header class="header" :class="{ 'header-fixed' : headerFixed }">
     <el-row>
         <el-col :span="24">
-          <el-menu default-active="5" class="el-menu-demo" mode="horizontal" @select="">
+          <el-menu default-active="5" class="el-menu-demo" mode="horizontal" @select="":router="true">
             <el-menu-item index="1">高级插件</el-menu-item>
             <el-menu-item index="2">在线商城</el-menu-item>
             <el-menu-item index="3">客户管理</el-menu-item>
             <el-menu-item index="4">系统设置</el-menu-item>
-            <el-menu-item index="5">活动发布</el-menu-item>
+            <el-menu-item index="/active/activePublic">活动发布</el-menu-item>
+            <el-menu-item index="/test">my vue test</el-menu-item>
           </el-menu>
         </el-col>
     </el-row>
     </header>
     <div v-show="headerFixed" style="position: relative;height: 60px;width: 100%;"></div>
-
-    <main>
-          <!-- 左侧导航 -->
-        <div class="main-left">
-          <el-menu default-active="/activePublic" class="el-menu-vertical-demo" :router="true">
-            <el-menu-item index="/activePublic" :class="{'isActive': active}">活动发布</el-menu-item>
-            <el-menu-item index="/activeManage" :class="{'isActive': !active}">活动管理</el-menu-item>
-          </el-menu>
-        </div>
-
-          <!-- 右侧主内容区 -->
-          <div  class="main-right" >
-            <transition name="fade">
-              <router-view class="view"></router-view>
-            </transition>
-          </div>
-    </main>
+    <router-view class="view"></router-view>
   </div>
 </template>
 
@@ -53,16 +38,16 @@ export default {
     }
   },
   created: function(){
-    this.$router.push('/activePublic');
+    this.$router.push('/active/activePublic');
   },
   methods: {
 
   },
   watch: {
      '$route': function (to,from) {
-         if(to.path == '/activePublic'){
+         if(to.path == '/active/activePublic'){
              this.active = true ;
-         }else if(to.path == '/activeManage'){
+         }else if(to.path == '/active/activeManage'){
              this.active = false ;
          }
      }

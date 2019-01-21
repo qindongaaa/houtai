@@ -180,7 +180,7 @@
                 me.form.storeName = me.userinfo.store.name
             }
             const weekRange = smtutil.getWeekRange2();
-            const weekRange2 = smtutil.getMonthRange2()
+            const weekRange2 = smtutil.getMonthRange2();
             me.form.su_date=[weekRange.beginDate,weekRange.endDate];
             me.form1.su_date=[smtutil.getFormatDate(weekRange2.beginDate.getTime()),smtutil.getFormatDate(weekRange2.endDate.getTime())]
 
